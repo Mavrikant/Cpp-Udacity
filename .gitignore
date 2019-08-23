@@ -20,6 +20,12 @@
 *.mod
 *.smod
 
+# CMake
+**/cmake-build-debug/
+
+# Clion
+**/.idea/
+
 # Compiled Static libraries
 *.lai
 *.la
