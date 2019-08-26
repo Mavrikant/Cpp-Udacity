@@ -24,14 +24,33 @@ Sandy Beaches
 #include <iostream>
 #include <string>
 
-int main(){
-    std::string name;
-    std::string adresss;
-    std::string phone_number;
+int main_36() {
+    std::string name1;
+    std::string adresss1;
+    std::string phone_number1;
+
+    std::string name2;
+    std::string adresss2;
+    std::string phone_number2;
 
     std::cout<<"Name?: ";
-    std::getline(std::cin, name);
-    std::cout<<"Hello "<<name;
+    std::getline(std::cin, name1);
+    std::cout << "Adress?: ";
+    std::getline(std::cin, adresss1);
+    std::cout << "Phone number?: ";
+    std::getline(std::cin, phone_number1);
+
+    std::cout << "Name?: ";
+    std::getline(std::cin, name2);
+    std::cout << "Adress?: ";
+    std::getline(std::cin, adresss2);
+    std::cout << "Phone number?: ";
+    std::getline(std::cin, phone_number2);
+
+    std::cout << name1 << "\t\t" << adresss1 << "\t\t" << phone_number1 << "\n";
+    std::cout << name2 << "\t\t" << adresss2 << "\t\t" << phone_number2 << "\n";
+
+
 
 
     return 0;
