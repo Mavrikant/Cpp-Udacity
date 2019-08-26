@@ -15,7 +15,7 @@
 #include<cmath>
 
 
-int main() {
+int main_4() {
     //Dimension of the cube
     float cubeSide = 5.4;
     //Dimension of sphere
