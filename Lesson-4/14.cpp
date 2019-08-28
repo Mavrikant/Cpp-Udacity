@@ -13,7 +13,7 @@
 
 #include <iostream>
 
-int main()
+int main_14()
 {
     float in1, in2;
     float result;
