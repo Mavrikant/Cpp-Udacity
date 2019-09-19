@@ -9,19 +9,19 @@
 
 #include<iostream>
 
+
 using namespace std;
+
 const int SIZE = 5;
 
 template<class T>
 class StudentRecord {
 private:
     const int size = SIZE;
-    T grades[5];
+    T grades[SIZE];
     int studentId;
 public:
-    StudentRecord() {
-    }
-
+    StudentRecord(T input);//A default constructor with a default value
     void setGrades(T *input);
 
     void setId(int idIn);
@@ -49,32 +49,41 @@ void StudentRecord<T>::printGrades() {
     std::cout << "\n";
 }
 
+template<class T>
+StudentRecord<T>::StudentRecord(T input) {
+    for (int i = 0; i < SIZE; i++) {
+        grades[i] = input;
+    }
+}
+
 
 int main() {
     //StudentRecord is the generic class
-    StudentRecord<int> srInt();
-    srInt.setId(111111);
-    int arrayInt[SIZE] = {4, 3, 2, 1, 4};
+    //The constructor sets the grade value
+    StudentRecord<int> srInt(-1);//add a default value using a constructor
+    srInt.setId(123456);
+    int arrayInt[SIZE] = {0, 0, 0, 0};
     srInt.setGrades(arrayInt);
     srInt.printGrades();
 
-    StudentRecord<char> srChar();
-    srChar.setId(222222);
-    char arrayChar[SIZE] = {'A', 'B', 'C', 'D', 'F'};
+    StudentRecord<char> srChar('U');//add a default value using a constructor
+    srChar.setId(234567);
+    char arrayChar[SIZE] = {'F', 'F', 'F', 'F', 'E'};
     srChar.setGrades(arrayChar);
     srChar.printGrades();
 
-    StudentRecord<float> srFloat();
-    srFloat.setId(333333);
+    StudentRecord<float> srFloat(-1.0);//add a default value using a constructor
+    srFloat.setId(345678);
     float arrayFloat[SIZE] = {2.75, 4.0, 3.7, 2.8, 3.99};
     srFloat.setGrades(arrayFloat);
     srFloat.printGrades();
 
-    StudentRecord<string> srString();
-    srString.setId(4444);
+    StudentRecord<string> srString("U");//add a default value using a constructor
+    srString.setId(456789);
     string arrayString[SIZE] = {"B", "B-", "C+", "B", "A"};
     srString.setGrades(arrayString);
     srString.printGrades();
 
     return 0;
 }
+
